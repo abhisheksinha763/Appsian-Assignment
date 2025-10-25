@@ -2,6 +2,10 @@ using System.Collections.Concurrent;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Configure to use PORT environment variable (required for Render)
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
+builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
+
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(policy =>

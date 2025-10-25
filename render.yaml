@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: task-manager-api
+    env: dotnet
+    buildCommand: cd Backend && dotnet restore && dotnet publish -c Release -o out
+    startCommand: cd Backend/out && dotnet Backend.dll
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production

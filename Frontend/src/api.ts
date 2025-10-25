@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Task } from './types';
 
-const API_URL = 'http://localhost:5000/api/tasks';
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api/tasks';
 
 export const getTasks = async (): Promise<Task[]> => {
   const response = await axios.get<Task[]>(API_URL);
