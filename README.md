@@ -2,7 +2,6 @@
 
 A clean and simple task management application built with .NET 8 and React with TypeScript.
 
-**🚀 [Deployment Guide](DEPLOYMENT.md)** - Deploy to Render (Backend) & Vercel (Frontend)
 
 ## Features
 
